@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">MyPortfolio</a>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="content" id="home">
+        <section class="hero">
+            <img src="image\profile.jpg" alt="Profile Image" class="profile-image"> <!-- Replace with your profile image path -->
+            <h1>Welcome to My Portfolio</h1>
+            <p>Discover my work and projects</p>
+        </section>
+
+        <section class="about" id="about">
+            <h2>About Me</h2>
+            <p>Enthusiastic final-year BSc Computer Science student specializing in web development. Proficient in HTML,
+                CSS, JavaScript, React, and MongoDB. Strong problem-solving skills, detail-oriented, and committed to
+                delivering high-quality solutions. Eager to contribute to innovative web projects and continue professional
+                growth
+            </p>
+        </section>
+
+        <section class="projects" id="projects">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Smart Canteen</h3>
+                <p>Description : Developed a web application using React framework called "Smart Canteen" for
+                    online food ordering.<br><br>
+                    Technologies Used: React framework for frontend development JavaScript, HTML, CSS for
+                    frontend design and functionality Node.js and Express for backend development Stripe
+                    payment gateway integration for secure online payments.
+                    <br><br>
+                    Features: Users can add food items to the cart, Modification of orders is supported, Secure
+                    payment processing through Stripe
+                    <br><br>
+                    Outcome: Successfully created an intuitive web application for streamlined food ordering and
+                    payment processing.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project Title</h3>
+                <p>Short description of the project.</p>
+            </div>
+            <!-- Add more projects as needed -->
+        </section>
+
+        <section class="contact" id="contact">
+            <h2>Contact</h2>
+            <form>
+                <label for="name">Name:</label>
+                 <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit" id="send">Send</button>
+            </form>
+        </section>
+
+        <section class="resume" id="resume">
+            <h2>My Updated Resume </h2>
+            <div class="resume-download">
+                <a href="image\kuldeep_resume.pdf" download="image\kuldeep_resume.pdf" class="download-button">Download Resume</a> <!-- Replace with your resume file path -->
+            </div>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

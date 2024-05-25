@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+     background-image: url('image/bg.jpg'); /*Replace with your image path */
+    /* background-color: RGB (224,215,255); */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f5f5f5; /* Light text for dark theme */
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+    overflow: hidden;
+    position: inherit;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 60px; /* Define a fixed height for the navbar */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.logo {
+    color: #f5f5f5; /* Light color for the logo */
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-links li {
+    padding: 0 15px;
+}
+
+.nav-links li a {
+    color: #f5f5f5; /* Light color for links */
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-links li a:hover {
+    color: #1e90ff; /* Color change on hover */
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon i {
+    color: #f5f5f5; /* Light color for menu icon */
+    font-size: 24px;
+}
+
+.content {
+    padding-top: 80px; /* Add padding equal to or greater than the navbar height */
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.hero {
+    text-align: left;
+    margin-top: 50px;
+    animation: fadeIn 2s;
+    color: black; /* Animation for hero section */
+}
+
+.profile-image {
+    width: 200px; /* Adjust the size as needed */
+    height: 200px; /* Maintain the same size for width and height */
+    border-radius: 50%; /* Make the image circular */
+    object-fit:inherit; /* Ensure the image covers the entire space */
+    margin-bottom: 20px; /* Space between the image and text */
+    animation: slideInFromTop 2s; /* Animation for profile image */
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: slideInFromLeft 2s; /* Animation for hero heading */
+}
+
+.hero p {
+    font-size: 1.5em;
+    animation: slideInFromRight 2s; /* Animation for hero paragraph */
+}
+
+.about, .projects, .contact, .resume {
+    margin: 50px 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    animation: fadeIn 2s; /* Animation for sections */
+}
+
+.projects .project-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    animation: fadeIn 1.5s; /* Animation for project cards */
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact label {
+    margin-top: 10px;
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact button {
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #f5f5f5;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth background-color transition */
+}
+
+.contact button:hover {
+    background-color: #1e90ff; /* Background color change on hover */
+}
+
+.resume-download {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.download-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #444;
+    color: #f5f5f5;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Smooth background-color transition */
+}
+
+.download-button:hover {
+    background-color: #1e90ff; /* Background color change on hover */
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
+    }
+
+    .nav-links li {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .nav-links li a {
+        font-size: 20px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+/* Show menu when clicked */
+.nav-links.show {
+    display: flex;
+}
